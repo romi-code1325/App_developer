@@ -1,0 +1,23 @@
+name: virtual_tryon
+description: Virtual spectacle try-on with real-time face tracking (Flutter + native ML Kit).
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Pinned below 0.11 on purpose: 0.10.x uses the Camera2 backend, which can
+  # stream raw NV21 frames (what ML Kit consumes with zero conversion).
+  camera: ^0.10.6
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
